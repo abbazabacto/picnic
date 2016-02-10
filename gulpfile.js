@@ -5,6 +5,7 @@ var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
+var express = require('gulp-express');
 var browserify = require('browserify');
 var browserSync = require('browser-sync').create();
 var source = require('vinyl-source-stream');
@@ -16,6 +17,10 @@ var root = path.normalize(__dirname, '../');
 gulp.task('default', ['serve', 'watch']);
 
 gulp.task('serve', function(){
+  //run api server
+  express.run(['api/index.js'])
+  
+  //run dev server
   browserSync.init({
     server: {
       // Serve up our build folder
