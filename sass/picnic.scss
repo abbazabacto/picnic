@@ -1,6 +1,29 @@
+@import 'reset';
+
+$font-family: Roboto, 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$bg-color: #fff;
+$bg-color-secondary: #F7F7F7;
+$text-color: #666;
+$primary-color: #D0021B;
+
 html,
 body{
   width: 100%;
   min-height: 100%;
-  background: #f1f1f2;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 300;
+  color: $text-color;
+  
+  @media screen and (min-width: 768px){
+    font-size: 20px;
+  }
+}
+
+body{
+  background-color: $bg-color;
+  background-image: url('/img/img_skyline@2x.png');
+  background-position: left 100%;
+  background-size: 852px 173px;
+  background-repeat: repeat-x;
 }
