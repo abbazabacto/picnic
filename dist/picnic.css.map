@@ -1,0 +1,1 @@
+{"version":3,"file":"picnic.css","sources":["picnic.scss"],"sourcesContent":["html,\nbody{\n  width: 100%;\n  min-height: 100%;\n  background: #f1f1f2;\n}"],"mappings":"AAAA,IAAI,CACJ,IAAI,AAAA,CACF,KAAK,CAAE,IAAK,CACZ,UAAU,CAAE,IAAK,CACjB,UAAU,CAAE,OAAQ,CACrB","names":[],"sourceRoot":"/source/"}
