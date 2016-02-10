@@ -28,7 +28,7 @@ gulp.task('watch', ['build'], function(){
   watch([
     path.join(root, 'src/**/*.js')
   ], function(){
-    gulp.start('karma');
+    gulp.start('babelify');
   });
   
   watch([
