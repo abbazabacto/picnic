@@ -1,4 +1,4 @@
-const angular = require('angular');
+import angular from 'angular';
 
 export default angular.module('picnic.app', [])
   .component('picnic', {
