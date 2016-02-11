@@ -20,7 +20,7 @@ gulp.task('default', ['serve', 'watch']);
 
 gulp.task('serve', function(){
   //run api server
-  express.run(['api/index.js'])
+  express.run(['api/index.js'], {}, false);
   
   //run dev server
   browserSync.init({
