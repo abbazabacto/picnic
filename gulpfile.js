@@ -5,9 +5,11 @@ var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
+var ngAnnotate = require('gulp-ng-annotate');
 var express = require('gulp-express');
 var browserify = require('browserify');
 var browserSync = require('browser-sync').create();
+var historyApiFallback = require('connect-history-api-fallback');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 var KarmaServer = require('karma').Server;
@@ -24,7 +26,8 @@ gulp.task('serve', function(){
   browserSync.init({
     server: {
       // Serve up our build folder
-      baseDir: root
+      baseDir: root,
+      middleware: [ historyApiFallback() ]
     }
   });
 });
@@ -37,7 +40,7 @@ gulp.task('watch', ['build'], function(){
   });
   
   watch([
-    path.join(root, 'sass/**/*.scss')
+    path.join(root, '**/*.scss')
   ], function(){
     gulp.start('sass');
   });
@@ -54,7 +57,10 @@ gulp.task('build', ['sass', 'babelify']);
 gulp.task('sass', function(){
   return gulp.src('./sass/picnic.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(sass({ 
+      includePaths: ['sass', 'src'],
+      outputStyle: 'compressed' 
+    }).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./dist'));
 });
@@ -67,6 +73,7 @@ gulp.task('babelify', ['karma'], function () {
       .pipe(source('picnic.js'))
       .pipe(buffer())
       .pipe(sourcemaps.init({ loadMaps: true }))
+      .pipe(ngAnnotate())
       .pipe(uglify())
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('dist'));
