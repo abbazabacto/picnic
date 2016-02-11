@@ -8,4 +8,4 @@ To run the project, make sure you have NodeJS installed, and run:
 
 The site will spawn a server which you can see at [localhost:3000](http://localhost:3000).
 
-All the code is tested using Karma/Jasmine, when the server above running see the [coverage report](http://localhost:3000/coverage/html/src).
+Some of the code is tested using Karma/Jasmine, when the server above running see the [coverage report](http://localhost:3000/coverage/html/src).
