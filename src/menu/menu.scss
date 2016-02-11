@@ -1,0 +1,54 @@
+@import 'variables';
+
+$menu-height: 50px !default;
+$menu-buttom-padding: 15px !default;
+
+menu {
+  display: flex;
+  background: $primary-color;
+  margin-bottom: 10px;
+  
+  > a {
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+  
+  img {
+    width: $menu-height;
+    height: $menu-height;
+    border-right: 3px solid $bg-color;
+  }
+  
+  nav {
+    height: $menu-height;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    height: $menu-height;
+    
+    li {
+      height: $menu-height;
+    }
+    
+    a {
+      display: inline-block;
+      height: 100%;
+      color: $bg-color;
+      border-right: 3px solid $bg-color;
+      padding-left: $menu-buttom-padding;
+      padding-right: $menu-buttom-padding;
+      line-height: $menu-height;
+      text-decoration: none;
+      
+      &:hover{
+        background: $bg-color-secondary;
+        color: $primary-color
+      }
+    }  
+  }
+}

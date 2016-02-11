@@ -5,11 +5,11 @@ describe('Picnic App', function(){
   
   beforeEach(inject(function($rootScope, $compile){
     var $scope = $rootScope.$new();
-    picnicApp = angular.element($compile('<picnic></picnic>')($scope));
+    picnicApp = angular.element($compile('<picnic-app></picnic-app>')($scope));
     $scope.$digest();
   }));
   
-  it('should be true', function(){
-    expect(picnicApp.text()).toBe('€ 1,00 + € 2,00 = € 3,00');
+  it('should work and render some html', function(){
+    expect(picnicApp.innerHTML).not.toBe('');
   });
 });

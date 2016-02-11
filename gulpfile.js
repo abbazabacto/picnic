@@ -27,7 +27,18 @@ gulp.task('serve', function(){
     server: {
       // Serve up our build folder
       baseDir: root,
-      middleware: [ historyApiFallback() ]
+      middleware: [ 
+        historyApiFallback({ 
+          rewrites: [ 
+            { 
+              from: /^\/coverage/, 
+              to: function(context){
+                return context.parsedUrl.pathname;
+              }
+            }
+          ]
+        })
+      ]
     }
   });
 });

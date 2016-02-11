@@ -1,0 +1,25 @@
+@import 'variables';
+
+product-details{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 900px;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  .product-details-image-holder {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .product-details {
+    flex: 2;
+    padding-left: 10px;
+  }
+  
+  product-price {
+    padding-bottom: 5px;
+  }
+}

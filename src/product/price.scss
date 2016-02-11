@@ -1,0 +1,19 @@
+@import 'variables';
+
+product-price{
+  display: inline-block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+  var {
+    display: block;
+  }
+  
+  em {
+    display: block;
+    color: #999;
+    font-size: 12px;
+    text-align: right;
+    padding-top: 5px;
+  }
+}
