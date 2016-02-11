@@ -1,10 +1,12 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var cors = require('cors');
 var port = process.env.PORT || 8080;
 var router = express.Router(); 
 var products = require('./products');
 
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -15,7 +17,8 @@ router.route('/products')
         return {
           id: product.id,
           title: product.title,
-          price: product.image
+          price: product.price,
+          image: product.image
         }
       });
     

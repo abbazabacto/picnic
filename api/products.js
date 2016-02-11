@@ -4,7 +4,7 @@ module.exports = [
     title: 'Bananen',
     price: {
       valuta: 'EUR',
-      price: 2,
+      amount: 2,
       quota: 1
     },
     image: '/img/products/bananas.jpg',
@@ -15,7 +15,7 @@ module.exports = [
     title: 'Druiven',
     price: {
       valuta: 'EUR',
-      price: 2.75,
+      amount: 2.75,
       quota: 0.5
     },
     image: '/img/products/grapes.jpg',
@@ -26,7 +26,7 @@ module.exports = [
     title: 'Frambozen',
     price: {
       valuta: 'EUR',
-      price: 2.75,
+      amount: 2.75,
       quota: 0.125
     },
     image: '/img/products/raspberries.jpg',
@@ -37,8 +37,8 @@ module.exports = [
     title: 'Limoenen',
     price: {
       valuta: 'EUR',
-      price: 0.49,
-      quota: 'piece'
+      amount: 0.49,
+      quota: '1p'
     },
     image: '/img/products/limes.jpg',
     description: 'Limoenen hebben een aromatische, friszure smaak. Limoensap geeft visgerechten of kip een frisse smaak. Ook lekker in fruitsalades of in cocktails.'
@@ -48,8 +48,8 @@ module.exports = [
     title: 'Mango\'s',
     price: {
       valuta: 'EUR',
-      price: 1.79,
-      quota: 'piece'
+      amount: 1.79,
+      quota: '2p'
     },
     image: '/img/products/mangos.jpg',
     description: 'Mango\'s zijn er in talloze vormen, maten en kleuren. De kleur zegt niets over smaak en rijpheid.'
@@ -59,7 +59,7 @@ module.exports = [
     title: 'Peren',
     price: {
       valuta: 'EUR',
-      price: 1.39,
+      amount: 1.39,
       quota: 1
     },
     image: '/img/products/pears.jpg',
